@@ -2,7 +2,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { fetchUsers} from "../redux/user.action";
 
 const UsersList = () => {
-  const { isLoading, data, error } = useSelector((state) => state);
+  const { isLoading, data, error } = useSelector((state) => state.users);
   const dispatch = useDispatch();
   const handleUsers =  () => {
     dispatch(fetchUsers())
